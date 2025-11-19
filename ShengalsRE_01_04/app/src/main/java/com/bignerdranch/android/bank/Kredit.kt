@@ -1,5 +1,6 @@
-package com.example.Bank
+package com.bignerdranch.android.bank
 
+import android.annotation.SuppressLint
 import android.os.Bundle
 import android.widget.ImageView
 import android.widget.SeekBar
@@ -37,12 +38,10 @@ class Kredit : AppCompatActivity() {
     }
 
     private fun setupEventListeners() {
-        // Стрелка назад - возврат на предыдущую страницу
         backArrow.setOnClickListener {
             finish()
         }
 
-        // Обработчик изменения ползунка суммы
         amountSeekBar.setOnSeekBarChangeListener(object : SeekBar.OnSeekBarChangeListener {
             override fun onProgressChanged(seekBar: SeekBar?, progress: Int, fromUser: Boolean) {
                 updateAmountDisplay()
@@ -53,19 +52,19 @@ class Kredit : AppCompatActivity() {
             override fun onStopTrackingTouch(seekBar: SeekBar?) {}
         })
 
-        // Кнопка расчета
         calculateButton.setOnClickListener {
             calculateMonthlyPayment()
         }
     }
 
+    @SuppressLint("SetTextI18n")
     private fun updateAmountDisplay() {
         val progress = amountSeekBar.progress
-        // Преобразуем прогресс в сумму: от 30,000 до 100,000
         val amount = 30000 + (progress * 1000)
         selectedAmount.text = "${amount.toLocaleString()} ₽"
     }
 
+    @SuppressLint("SetTextI18n")
     private fun calculateMonthlyPayment() {
         val termText = loanTermEditText.text.toString().trim()
 
@@ -97,7 +96,6 @@ class Kredit : AppCompatActivity() {
         return payment.toInt()
     }
 
-    // Функция для форматирования чисел с разделителями тысяч
     private fun Int.toLocaleString(): String {
         return String.format("%,d", this).replace(',', ' ')
     }
