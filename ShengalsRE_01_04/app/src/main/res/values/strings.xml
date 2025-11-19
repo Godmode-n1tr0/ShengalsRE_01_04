@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Bank</string>
+    <string name="text1">Введите ваш логин и пароль</string>
+    <string name="Registr">Регистрация</string>
+    <string name="vhod">ВОЙТИ</string>
+    <string name="raschet">РАССЧИТАТь</string>
+    <string name="log">Логин</string>
+    <string name="password">Пароль</string>
+    <string name="kredit">Кредитный калькулятор</string>
+    <string name="skolko">Сколько вам нужно?</string>
+    <string name="srok">Введите срок кредита</string>
+    <string name="platej">ежемесячный платёж</string>
+
+</resources>

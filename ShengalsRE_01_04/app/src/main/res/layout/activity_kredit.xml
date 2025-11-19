@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#F8FFF8"
+    tools:context=".Kredit">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingVertical="10dp">
+
+        <ImageView
+            android:id="@+id/backArrow"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/arrow" />
+
+        <TextView
+            android:id="@+id/titleTextView"
+            android:layout_width="wrap_content"
+            android:layout_marginStart="60dp"
+            android:layout_marginEnd="43dp"
+            android:gravity="center"
+            android:text="@string/kredit"
+            android:textAlignment="center"
+            android:layout_marginBottom="30dp"
+            android:textColor="@color/black"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:layout_height="35sp"/>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="519dp"
+        android:orientation="vertical"
+        android:background="@color/green"
+        android:paddingVertical="40dp"
+        android:gravity="center">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            android:paddingHorizontal="20dp">
+            <LinearLayout
+                android:layout_width="350dp"
+                android:layout_height="70dp"
+                android:orientation="vertical"
+                android:background="@drawable/summ">
+
+                <TextView
+                    android:id="@+id/amountLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/skolko"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="80dp"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:textSize="18sp">
+
+                </TextView>
+
+                <SeekBar
+                    android:id="@+id/amountSeekBar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:max="100"
+                    android:progress="20"
+                    android:thumbTint="@color/green"
+                    android:progressTint="#375F40" />
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="14dp"
+                        android:layout_marginStart="10dp"
+                        android:text="от 30 000"
+                        android:textColor="@color/black"
+                        android:textSize="12sp"
+                        android:layout_marginBottom="30dp" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="14dp"
+                        android:layout_marginStart="220dp"
+                        android:text="до 100 000"
+                        android:textColor="@color/black"
+                        android:textSize="12sp"
+                        android:layout_marginBottom="30dp" />
+                </LinearLayout>
+
+                </LinearLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                app:boxBackgroundMode="outline"
+                app:boxStrokeColor="#FFFFFF"
+                app:hintTextColor="#FFFFFF">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/loanTermEditText"
+                    android:layout_width="170dp"
+                    android:gravity="center"
+                    android:layout_marginStart="90dp"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/srok"
+                    android:textSize="12sp"
+                    android:textStyle="bold"
+                    android:background="@drawable/srok"
+                    android:inputType="number" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/calculateButton"
+                android:layout_width="350dp"
+                android:layout_height="70dp"
+                android:layout_marginBottom="20dp"
+                android:text="@string/raschet"
+                android:textColor="#FFFFFF"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:background="@drawable/edittext_background"
+                android:gravity="center" />
+
+            <TextView
+                android:id="@+id/monthlyPaymentResult"
+                android:layout_width="wrap_content"
+                android:layout_height="60dp"
+                android:text="@string/platej"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:background="@drawable/platej"
+                android:padding="16dp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+</LinearLayout>
