@@ -7,6 +7,7 @@ import android.widget.SeekBar
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.widget.AppCompatButton
 import com.bignerdranch.android.bank.R
 import com.google.android.material.button.MaterialButton
 import com.google.android.material.textfield.TextInputEditText
@@ -17,7 +18,7 @@ class Kredit : AppCompatActivity() {
     private lateinit var amountSeekBar: SeekBar
     private lateinit var selectedAmount: TextView
     private lateinit var loanTermEditText: TextInputEditText
-    private lateinit var calculateButton: MaterialButton
+    private lateinit var calculateButton: AppCompatButton
     private lateinit var monthlyPaymentResult: TextView
 
     override fun onCreate(savedInstanceState: Bundle?) {
